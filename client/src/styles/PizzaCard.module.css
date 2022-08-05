@@ -1,0 +1,47 @@
+.body {
+    background-color: aliceblue;
+}
+.container {
+    height: 250px;
+    width: 250px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+    transition: 0.3s;
+}
+.container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.pizzaDiv {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: 50%;
+}
+.pizzaImg {
+    padding-top: 15px;
+    width: 220px;
+    height: 150px;
+}
+
+.nameDiv {
+    width: inherit;
+    height: 20%; 
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: black;
+}
+
+/* .buttonDiv {
+    display: flex;
+    height: 10%;
+    width: inherit; 
+    position: absolute;
+    justify-content: center;
+    padding-top: 10px;
+} */
+
+
