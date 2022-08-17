@@ -1,16 +1,11 @@
 const Product = require("../db/models/product");
 
-const getAllProducts = () => {
-  Product.find({})
-  .then((data, err) => {
-          if (!err) {
-              console.log(data + "data")
-              return data;
-          } else {
-            return null;
-              throw err;
-          }
-  }).catch(err => console.log(err));
+const getAllProducts = async() => {
+  try {
+  return await Product.find({})
+   } catch(e) { 
+    console.log(e) 
+  }
 }
 
 const createNewProduct = (newProduct) => {
