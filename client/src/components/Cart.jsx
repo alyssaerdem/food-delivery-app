@@ -1,10 +1,9 @@
 import React from 'react';
-import Navigation from "../components/Navigation";
+import styles from '../styles/Cart.module.css';
 
 function Cart() {
     return (
-        <div>
-            <Navigation />
+        <div className={styles.container}>
             <h1>This is the cart page</h1>
         </div>
     )

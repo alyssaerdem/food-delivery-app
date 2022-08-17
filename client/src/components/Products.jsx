@@ -1,11 +1,12 @@
 import React from 'react';
-import Navigation from './Navigation';
+import PizzaCard from './PizzaCard';
+import styles from '../styles/Products.module.css';
 
-function Products() {
+const Products = () => {
     return (
-        <div>
-            <Navigation />
+        <div className={styles.container}>
             <h1>This is the products page</h1>
+            <PizzaCard />
         </div>
     )
 }

@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { GiFullPizza } from 'react-icons/gi';
 import styles from "../styles/Home.module.css";
-import Navigation from "./Navigation";
 
-function Home() {
+const Home = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -13,8 +12,7 @@ function Home() {
   }, []);
 
   return (
-    <div className={styles.Home}>
-      <Navigation />
+    <div className={styles.container}>
       <header className={styles.header}>
         <GiFullPizza className={styles.logo} alt="logo"/>
         <p>{!data ? "Loading..." : data}</p>
