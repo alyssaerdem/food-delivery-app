@@ -11,16 +11,18 @@
     transition: 0.3s;
 }
 .container:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(234, 234, 234, 0.2); 
+    background-color: rgb(230, 230, 230, 2);
+    cursor: pointer;
   }
 
-.pizzaDiv {
+.productDiv {
     display: flex;
     justify-content: center;
     width: inherit;
     height: 50%;
 }
-.pizzaImg {
+.productImg {
     padding-top: 15px;
     width: 220px;
     height: 150px;
@@ -31,7 +33,7 @@
     height: 20%; 
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 10px;
     color: black;
 }
 

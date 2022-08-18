@@ -6,8 +6,8 @@ const ProductCard = ({product}) => {
     console.log(product)
 return (
     <div className={styles.container}>
-        <div className={styles.pizzaDiv}>
-            <img src={PizzaImage} alt="margherita pizza" className={styles.pizzaImg}/>
+        <div className={styles.productDiv}>
+            <img src={PizzaImage} alt="margherita pizza" className={styles.productImg}/>
         </div>
         <div className={styles.nameDiv}>
             <h2>{product.name}</h2>

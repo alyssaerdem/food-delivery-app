@@ -5,7 +5,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.card}>
-          <h2 className={styles.motto}>
+          <h2 className={styles.heading}>
             Pizza
           </h2>
         </div>
@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <h1 className={styles.title}>HOURS</h1>
+          <h1 className={styles.title}>Hours</h1>
           <p className={styles.text}>
             MONDAY - FRIDAY
             <br /> 9:00 – 22:00
@@ -31,6 +31,21 @@ const Footer = () => {
           <p className={styles.text}>
             SATURDAY - SUNDAY
             <br /> 12:00 – 24:00
+          </p>
+        </div>
+        <div className={styles.card}>
+          <h1 className={styles.title}>About</h1>
+          <p className={styles.text}>
+            Our Story
+          </p>
+          <p className={styles.text}>
+            Careers
+          </p>
+          <p className={styles.text}>
+            Contact
+          </p>
+          <p className={styles.text}>
+            Privacy Policy
           </p>
         </div>
       </div>

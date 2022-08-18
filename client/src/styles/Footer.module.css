@@ -2,6 +2,7 @@
     height: calc(100vh - 500px);
     background-color: rgb(24, 23, 23);
     display: flex;
+    overflow: hidden;
 }
   
   .item {
@@ -30,6 +31,6 @@
     color: lightgray;
   }
   
-  .motto {
+  .heading {
     color: rgb(211, 211, 211);
   }

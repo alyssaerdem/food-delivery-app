@@ -6,31 +6,3 @@
   text-align: center;
 }
 
-.logo {
-  height: 100vmin;
-  pointer-events: none;
-  width: 200px;
-  height: 200px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.header {
-  padding-top: 15%;
-  min-height: 20vh;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

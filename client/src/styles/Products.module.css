@@ -1,15 +1,14 @@
 .container {
     height: calc(100vh - 100px); /* needs a fix */
     background-color: rgb(255, 70, 70);  
-    padding-top: 10px; /* fixes extra black border temporarily */
-  } 
-
-.productsContainer {
-    margin-top: 20px;
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly; /* need better spacing */
+    overflow: scroll;
 }
 
-
+.link {
+  text-decoration: none;
+}

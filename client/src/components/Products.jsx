@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import ProductCard from './ProductCard';
 import styles from '../styles/Products.module.css';
+import LoadingIcon from './LoadingIcon';
+import {Link} from 'react-router-dom';
+
 
 const Products = () => {
 
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState(null);
     useEffect(() => {
         fetch("/api/products")
           .then((res) => res.json())
@@ -13,13 +16,18 @@ const Products = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.productsContainer}>
-              {/* <h1>Products</h1> */}
-                {products.map(product => (
-                        <ProductCard product = {product}/>
-                    )
-                )}
-            </div>
+             {!products ? <LoadingIcon />:
+                products.map(product => (
+
+                    <Link
+                        className={styles.link}
+                        to={`/product/${product.name}`}
+                        state={{data:{product}}}
+                    >
+                    <ProductCard product = {product}/>
+                    </Link>
+                )
+            )}
         </div>
     )
 }
