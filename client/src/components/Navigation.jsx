@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Navigation.module.css"
 import { FaShoppingCart } from 'react-icons/fa';
+import Logo from "../logo.png";
 
 import { Link } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const Navigation = () => {
     return (
     <div className={styles.container}>
         <div className={styles.item}>
-            Logo
+        <img src={Logo} alt="Pizza Bella logo" className={styles.logo}/> 
         </div>
         <div className={styles.item}>
          <ul className={styles.list}>

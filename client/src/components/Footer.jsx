@@ -1,13 +1,12 @@
 import styles from "../styles/Footer.module.css";
+import Logo from "../light-logo.png";
 
 const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.card}>
-          <h2 className={styles.heading}>
-            Pizza
-          </h2>
+            <img src={Logo} alt="Pizza Bella logo" className={styles.logo}/> 
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>Locations</h1>
@@ -26,7 +25,7 @@ const Footer = () => {
           <h1 className={styles.title}>Hours</h1>
           <p className={styles.text}>
             MONDAY - FRIDAY
-            <br /> 9:00 – 22:00
+            <br /> 11:00 – 23:00
           </p>
           <p className={styles.text}>
             SATURDAY - SUNDAY

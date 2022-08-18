@@ -1,5 +1,5 @@
 .container {
-    height: calc(100vh - 100px); /* needs a fix */
+    height: 100vh;
     background-color: rgb(255, 70, 70);  
     padding-top: 20px;
     display: flex;
@@ -12,3 +12,7 @@
 .link {
   text-decoration: none;
 }
+
+
+
+

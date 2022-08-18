@@ -1,5 +1,5 @@
 .container {
-    height: calc(100vh - 100px); /* needs a fix */
+    height: 100vh;
     background-color: rgb(255, 70, 70);  
     padding-top: 20px;
     overflow: scroll;
@@ -7,38 +7,52 @@
     justify-content: center;
 }
 
-.productCard {
-    height: 95%;
-    width: 75%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly; /* need better spacing */
+
+.productInfo {
+    height: 600px;
+    width: 850px;
     background-color: rgb(245, 245, 245);
     border-radius: 20px;
     position: relative;
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
     transition: 0.3s;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+.productInfo > .item {
+    flex: 1 1 30%; /*grow | shrink | basis */
+    height: inherit;
 }
 
 .productImg {
     padding-top: 15px;
-    width: 450px;
+    width: 430px;
     height: 280px;
-    flex-direction: column;
+}
+
+.imgDiv {
+    justify-content: left;
+
 }
 
 .nameH1, .description {
     color: black;
-  }
+
+}
 
 .nameH1 {
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-top: 20px;
     text-shadow: 0.2px 0.2px #989898;
+    
 }
 
 .description {
-    margin-left: 10%;
+    margin-left: 20%;
     line-height: 1.3em;
     display: block;
     flex-direction: column;
@@ -52,5 +66,12 @@
 
 .sizeContainer {
     border-color: black 2px;
-   flex-direction: column;
+    border-width: 20px;
+    height: 200px;
+    width: 200px;
+    margin-top: 18%;
+}
+
+.sizeH2 {
+    color: black;
 }

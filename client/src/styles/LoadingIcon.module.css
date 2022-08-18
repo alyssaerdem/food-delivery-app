@@ -1,4 +1,4 @@
-.logo {
+.pizzaIcon {
     height: 100vmin;
     pointer-events: none;
     width: 200px;
@@ -6,8 +6,8 @@
   }
   
   @media (prefers-reduced-motion: no-preference) {
-    .logo {
-      animation: logo-spin infinite 20s linear;
+    .pizzaIcon {
+      animation: pizzaIcon-spin infinite 20s linear;
     }
   }
   
@@ -19,7 +19,7 @@
     justify-content: center;
   }
   
-  @keyframes logo-spin {
+  @keyframes pizzaIcon-spin {
     from {
       transform: rotate(0deg);
     }

@@ -1,16 +1,25 @@
+/* Need to make responsive with hamburger menu */
+
 .container {
     display: flex;
     height: 80px;
     padding: 0 50px;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    overflow: hidden;
     background-color: rgb(245, 245, 245);
     color: black;
+
 }
 
 .item {
-    flex-basis: 200px;
+    flex-basis: 100px;
+}
+
+.logo {
+    margin-top: 70px;
+    height: 180px;
+    width: 180px;
 }
 
 .list {
@@ -18,6 +27,7 @@
     padding: 0;
     align-items: center;
     list-style: none;
+    margin-right: 85px;
 }
 
 .listItem {

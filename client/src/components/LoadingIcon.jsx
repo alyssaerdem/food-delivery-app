@@ -5,7 +5,7 @@ import styles from "../styles/LoadingIcon.module.css";
 const LoadingIcon = () => {
     return (
 <header className={styles.header}>
-        <GiFullPizza className={styles.logo} alt="logo"/>
+        <GiFullPizza className={styles.pizzaIcon} alt="logo"/>
         <p>Loading...</p>
 </header>
     )
