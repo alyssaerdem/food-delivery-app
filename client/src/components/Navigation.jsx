@@ -26,7 +26,9 @@ const Navigation = () => {
     return (
     <div className={styles.container}>
         <div className={styles.logoDiv}>
-        <img src={Logo} alt="Pizza Bella logo" className={styles.logo}/> 
+                <Link to="/" className={styles.link}>
+                    <img src={Logo} alt="Pizza Bella logo" className={styles.logo}/> 
+                </Link>
         </div>
         <div className={styles.item}>
          <ul className={styles.list}>
@@ -55,17 +57,17 @@ const Navigation = () => {
             <GrClose onClick={toggleOpenMenu} className={styles.hamburgerIcon}/> }
             <div className={styles.openMenu} style={{ display: (openMenu ? 'block' : 'none') }}>
                 <div className={styles.sideItem}>
-                    <Link to="/" className={styles.link}>Home</Link>
+                    <Link to="/" className={styles.link} onClick={()=>toggleOpenMenu()}>Home</Link>
                 </div>
             <div className={styles.sideItem}>
-                <Link to="/products" className={styles.link}>Products</Link>
+                <Link to="/products" className={styles.link} onClick={()=>toggleOpenMenu()}>Products</Link>
             </div>
             <div className={styles.sideItem}>
-                <p className={styles.pLink} onClick={()=> scrollDown()}>About</p>
+                <p className={styles.pLink} onClick={()=>{scrollDown(); toggleOpenMenu()}}>About</p>
             </div>
 
             <div className={styles.sideItem}>
-                <Link to="/cart" className={styles.link}>
+                <Link to="/cart" className={styles.link} onClick={()=> toggleOpenMenu()}>
                      Cart&nbsp;
                     <FaShoppingCart className={styles.cartIcon}/>
                     <div className={styles.counter}>1</div>

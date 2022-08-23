@@ -18,7 +18,7 @@ const Products = () => {
         <div className={styles.container}>
              {!products ? <LoadingIcon />:
                 products.map(product => (
-
+                    <div className={styles.item}>
                     <Link
                         className={styles.link}
                         to={`/product/${product.name}`}
@@ -26,6 +26,7 @@ const Products = () => {
                     >
                     <ProductCard product = {product}/>
                     </Link>
+                    </div>
                 )
             )}
         </div>
