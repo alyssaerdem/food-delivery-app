@@ -16,7 +16,7 @@ const Products = () => {
 
     return (
         <div className={styles.container}>
-             {!products ? <LoadingIcon />:
+             {!products ? <div className={styles.LoadingIconDiv}> <LoadingIcon /> </div>:
                 products.map(product => (
                     <div className={styles.item}>
                     <Link

@@ -4,7 +4,10 @@ const mongoose = require("mongoose");
 const ProductSchema = new mongoose.Schema({
     name: String,
     description: String,
-    sizes: [String]
+    sizes : [{
+      size : String,
+      price : Number
+       }]
   });
   
 // create a model with productSchema

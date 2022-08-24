@@ -2,7 +2,8 @@
     background-color: aliceblue;
 }
 .container {
-    height: 35vh;
+    height: 30vh;
+    width: 20vw;
     background-color: rgb(245, 245, 245);
     border-radius: 20px;
     position: relative;
@@ -31,16 +32,21 @@
     height: 20%; 
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-    padding-left: 10px;
     padding-right: 10px;
-    color: black;
-    font-size: calc(8px + 1vmin);
+    color: rgb(58, 58, 58);
+    font-size: calc(10px + 1vmin);
 }
+
 
 @media only screen and (max-width: 700px) {
     .container {
-        height: 28vh;
+        height: 20vh;
+        width: 40vw;
     }
+
+    .nameDiv {
+        font-size: calc(2px + 1vmin);
+    }
+
 }
 

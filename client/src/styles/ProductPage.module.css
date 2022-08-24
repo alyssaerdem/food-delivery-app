@@ -1,8 +1,8 @@
 .container {
     height: 100vh;
+    width: 100vw;
     background-color: rgb(255, 70, 70);  
     padding-top: 20px;
-    overflow: scroll;
     display: flex;
     justify-content: center;
 }
@@ -40,7 +40,7 @@
 }
 
 .nameH1, .description {
-    color: black;
+    color: rgb(58, 58, 58);
 
 }
 
@@ -65,13 +65,62 @@
 }
 
 .sizeContainer {
-    border-color: black 2px;
     border-width: 20px;
-    height: 200px;
-    width: 200px;
-    margin-top: 18%;
+    height: 20px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
 }
 
 .sizeH2 {
-    color: black;
+    color: rgb(58, 58, 58);
+    margin-top: 20%;
+}
+
+.smallPizza, .mediumPizza, .largePizza {
+    padding: 20%;
+    color: rgb(58, 58, 58);
+    margin-bottom: 0;
+}
+.sizeItem, .selectedSize {
+    height: 55px;
+    width: 95px;
+}
+
+.sizeItem:hover {
+    border-bottom: 5px solid #52af55;
+    cursor: pointer;
+}
+
+
+.smallPizza {
+    height: 25px;
+    width: 25px;
+}
+
+.mediumPizza {
+    height: 28px;
+    width: 28px;
+}
+
+.largePizza {
+    height: 32px;
+    width: 32px;
+}
+
+.selectedSize {
+    border-bottom: 5px solid #52af55;
+}
+
+.size {
+    z-index: 2;
+    position: absolute;
+    color: rgb(245, 245, 245);
+    margin-left: 4%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    background-color: #52af55;
+    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
 }
