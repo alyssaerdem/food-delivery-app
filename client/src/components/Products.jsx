@@ -21,7 +21,7 @@ const Products = () => {
                     <div className={styles.item}>
                     <Link
                         className={styles.link}
-                        to={`/product/${product.name}`}
+                        to={`/product/${product.name.replace(/\s+/g, '')}`}
                         state={{data:{product}}}
                     >
                     <ProductCard product = {product}/>
