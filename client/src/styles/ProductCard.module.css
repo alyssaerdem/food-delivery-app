@@ -2,8 +2,8 @@
     background-color: aliceblue;
 }
 .container {
-    height: 30vh;
-    width: 20vw;
+    height: 300px;
+    width: 300px;
     background-color: rgb(245, 245, 245);
     border-radius: 20px;
     position: relative;
@@ -40,12 +40,12 @@
 
 @media only screen and (max-width: 700px) {
     .container {
-        height: 20vh;
-        width: 40vw;
+        height: 200px;
+        width: 200px;
     }
 
     .nameDiv {
-        font-size: calc(2px + 1vmin);
+        font-size: calc(8px + 1vmin);
     }
 
 }
