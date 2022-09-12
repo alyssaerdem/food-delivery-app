@@ -66,17 +66,17 @@ const Navigation = () => {
                 <p className={styles.pLink} onClick={()=>{scrollDown(); toggleOpenMenu()}}>About</p>
             </div>
 
-            <div className={styles.sideItem}>
-                <Link to="/cart" className={styles.link} onClick={()=> toggleOpenMenu()}>
-                     Cart&nbsp;
-                    <FaShoppingCart className={styles.cartIcon}/>
-                    <div className={styles.counter}>1</div>
-                </Link>  
-            </div>
+           
             </div>
         </div>
+        <div className={styles.cart}>
+            <Link to="/cart" className={styles.link}>
+                <FaShoppingCart className={styles.cartIcon}/>
+                <div className={styles.counter}>1</div>
+            </Link>   
+            </div>
         </div>
-        
+
        </div>
       
     )
