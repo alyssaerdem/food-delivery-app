@@ -1,50 +1,31 @@
 .container {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(255, 70, 70);  
-    padding-top: 20px;
     display: flex;
-    justify-content: center;
-}
-
-
-.productInfo {
-    height: 600px;
-    width: 850px;
     background-color: rgb(245, 245, 245);
-    border-radius: 20px;
     position: relative;
-    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
-    transition: 0.3s;
-    overflow: hidden;
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    overflow-y: scroll;
 }
 
-.productInfo > .item {
-    flex: 1 1 30%; /*grow | shrink | basis */
+.container > .item {
     height: inherit;
 }
 
-.productImg {
+.image {
     padding-top: 15px;
     width: 430px;
     height: 280px;
 }
 
-.imgDiv {
-    justify-content: left;
-
-}
-
-.nameH1, .description {
+.h1, .description {
     color: rgb(58, 58, 58);
 
 }
 
-.nameH1 {
+.h1 {
     margin-left: 15%;
     margin-top: 20px;
     text-shadow: 0.2px 0.2px #989898;
@@ -66,14 +47,14 @@
 
 .sizeContainer {
     border-width: 20px;
-    height: 20px;
+    height: 120px;
     width: 400px;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
 }
 
-.sizeH2 {
+.h2 {
     color: rgb(58, 58, 58);
     margin-top: 20%;
 }
@@ -117,10 +98,74 @@
     z-index: 2;
     position: absolute;
     color: rgb(245, 245, 245);
-    margin-left: 4%;
+    margin-left: 2.6%;
     padding: 5px;
     border-radius: 10px;
     font-size: 0.9em;
     background-color: #52af55;
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+}
+.sizeItem, .selectedSize > p {
+    color: rgb(58, 58, 58);
+    font-display: bold;
+}
+
+.quantityContainer {
+    padding-top: 20px;
+    border-width: 20px;
+    height: 40%;
+    width: 415px;
+    color: rgb(58, 58, 58);
+  /*  border: 2px solid green; */
+    float: right;
+}
+
+.input { 
+    width: 30px;
+    height: 20px;
+         
+}
+
+
+.label {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.button {
+    margin-top: 40px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(252, 255, 253, 0.2)x;
+    background-color: #52af55;
+}
+
+.button p {
+    font-size: small;
+    color: rgb(245, 245, 245);
+    text-align: center;
+}
+.button:hover {
+    box-shadow: 0 8px 16px 0 rgba(234, 234, 234, 0.2); 
+    cursor: pointer;
+    background-color: rgb(66, 144, 69);
+}
+
+
+@media only screen and (max-width: 800px) {
+    .item {
+        padding: 10px;
+    }  
+    .container {
+        height: min-content;
+        width: min-content;
+        overflow-x: hidden;
+    }
+   
+    .sizeContainer {
+        width: 200px;
+    }
+
+
 }
