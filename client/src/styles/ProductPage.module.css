@@ -1,4 +1,5 @@
 .container {
+    padding-top: 5vh;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -29,20 +30,19 @@
     margin-left: 15%;
     margin-top: 20px;
     text-shadow: 0.2px 0.2px #989898;
-    
 }
 
 .description {
     margin-left: 20%;
     line-height: 1.3em;
-    display: block;
     flex-direction: column;
 }
 
-.descriptionText {
+.description p {
     font-style: italic;
     inline-size: 250px;
     overflow-wrap: break-word;
+    font-size: 1.2em;
 }
 
 .sizeContainer {
@@ -101,7 +101,7 @@
     margin-left: 2.6%;
     padding: 5px;
     border-radius: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
     background-color: #52af55;
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
 }
@@ -118,6 +118,7 @@
     color: rgb(58, 58, 58);
   /*  border: 2px solid green; */
     float: right;
+    padding-bottom: 5vh;
 }
 
 .input { 
@@ -129,20 +130,19 @@
 
 .label {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .button {
     margin-top: 40px;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    box-shadow: rgba(252, 255, 253, 0.2)x;
+    height: 60px;
+    border-radius: 20px;
     background-color: #52af55;
+    width: 40%;
 }
 
 .button p {
-    font-size: small;
+    font-size: 1.5em;
     color: rgb(245, 245, 245);
     text-align: center;
 }
@@ -153,19 +153,53 @@
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     .item {
-        padding: 10px;
+        width: 100vw;
     }  
     .container {
+        overflow-x: hidden;
         height: min-content;
         width: min-content;
-        overflow-x: hidden;
+        justify-content: center;
     }
    
-    .sizeContainer {
-        width: 200px;
+    .description {
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: inherit;
     }
 
+    .sizeContainer, .quantityContainer {
+        width: 80vw;
+        margin: auto;
+        float: none;
+    }
 
+    .button {
+        width: 80vw;
+        display: block;
+        justify-content: center;
+    }
+
+    .imgDiv {
+        display: flex;
+        justify-content: center;
+    }
+
+    .h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .h2 {
+        margin-top: 0;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .size {
+        margin-left: 9.2%;
+    }
 }

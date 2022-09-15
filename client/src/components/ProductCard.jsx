@@ -12,9 +12,6 @@ return (
         <div className={styles.nameDiv}>
             <h2>{product.name}</h2>
         </div>
-       {/* <div className={styles.buttonDiv}>
-            <button>View</button>
-</div> */}
     </div>
 )};
 

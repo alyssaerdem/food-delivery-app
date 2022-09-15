@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import LoadingIcon from "../components/LoadingIcon";
 import styles from "../styles/Home.module.css";
-import LoadingIcon from "./LoadingIcon";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -12,9 +14,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div>
+      <Navigation />
+      <div className={styles.container}>
       <LoadingIcon />
-      {data}
+        {data}
+      </div>
+      <Footer />
     </div>
   );
 }

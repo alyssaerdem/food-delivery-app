@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from '../components/ProductCard';
 import styles from '../styles/Products.module.css';
-import LoadingIcon from './LoadingIcon';
+import LoadingIcon from '../components/LoadingIcon';
 import {Link} from 'react-router-dom';
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 
 const Products = () => {
@@ -15,6 +17,8 @@ const Products = () => {
       }, []);
 
     return (
+        <div>
+            <Navigation />
         <div className={styles.container}>
              {!products ? <div className={styles.LoadingIconDiv}> <LoadingIcon /> </div>:
                 products.map(product => (
@@ -29,6 +33,8 @@ const Products = () => {
                     </div>
                 )
             )}
+        </div>
+        <Footer />
         </div>
     )
 }

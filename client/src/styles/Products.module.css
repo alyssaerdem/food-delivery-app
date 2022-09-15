@@ -1,6 +1,7 @@
 .container {
     height: 100vh;
-    background-color: rgb(245, 245, 245); 
+   /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(255, 70, 70);
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;

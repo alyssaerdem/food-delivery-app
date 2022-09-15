@@ -63,7 +63,7 @@ const Navigation = () => {
                 <Link to="/products" className={styles.link} onClick={()=>toggleOpenMenu()}>Products</Link>
             </div>
             <div className={styles.sideItem}>
-                <p className={styles.pLink} onClick={()=>{scrollDown(); toggleOpenMenu()}}>About</p>
+                <Link to="" className={styles.aboutLink} onClick={()=>{scrollDown(); toggleOpenMenu()}}>About</Link>
             </div>
 
            

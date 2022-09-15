@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import { useLocation } from "react-router-dom";
-import styles from '../styles/ProductPage.module.css';
 import PizzaImage from "../margherita_pizza.png";
 import {GiFullPizza} from 'react-icons/gi';
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import styles from '../styles/ProductPage.module.css';
 
 const ProductPage = () => {
 const location = useLocation();
@@ -11,6 +13,8 @@ const [selectedSize, setSelectedSize] = useState("");
 
 console.log(product)
     return (
+        <div>
+            <Navigation />
         <div className={styles.container}>
             <div className={styles.item}>
             <h1 className={styles.h1}>{product.name}</h1>
@@ -19,13 +23,13 @@ console.log(product)
             </div>
             <div className={styles.description}>
 
-               <p className={styles.descriptionText}>
+               <p>
                 {product.description} 
                 </p>
             </div>
             </div>
             <div className={styles.item}>
-                <div className={styles.h2}><h2>Sizes</h2></div>
+                <h2 className={styles.h2}>Sizes</h2>
             <div className={styles.sizeContainer}>
             {product.sizes.map(element => {
                 console.log(element)
@@ -54,6 +58,8 @@ console.log(product)
       </div>
         </div>
         </div>
+        <Footer />
+    </div>
      
     )
 }
