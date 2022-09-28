@@ -13,15 +13,17 @@ const createNewProduct = (req, res) => {
     if (
         !body.name ||
         !body.description ||
-        !body.sizes
+        !body.sizes ||
+        !body.image
     ) {
     return;
     }
  
     const newProduct = {
         name: body.name,
+        image: body.image,
         description: body.description,
-        sizes: body.sizes
+        sizes: body.sizes,
     };
 
     const createdProduct = productService.createNewProduct(newProduct);

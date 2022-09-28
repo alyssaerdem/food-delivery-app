@@ -1,13 +1,14 @@
 import React from "react";
-import PizzaImage from "../margherita_pizza.png";
 import styles from "../styles/ProductCard.module.css";
+import image from "../images/margherita_pizza.png";
+
 
 const ProductCard = ({product}) => {
-    console.log(product)
+    console.log(`${product.image}`)
 return (
     <div className={styles.container}>
         <div className={styles.productDiv}>
-            <img src={PizzaImage} alt="margherita pizza" className={styles.productImg}/>
+            <img src={image} alt="margherita pizza" className={styles.productImg}/>
         </div>
         <div className={styles.nameDiv}>
             <h2>{product.name}</h2>

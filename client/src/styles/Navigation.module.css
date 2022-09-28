@@ -6,7 +6,7 @@
     justify-content: space-between;
     overflow: hidden;
     background-color: rgb(245, 245, 245);
-    color: black;
+    color: rgb(58, 58, 58);
     transition: 3s;
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
     font-size: 1.2em;
@@ -98,6 +98,11 @@
     font-weight: bold;
     color: #ffffff;
     left: 18px;
+    font-size: 16px;
+}
+
+.hiddenCounter {
+    display: none;
 }
 
 @media only screen and (max-width: 700px) {
@@ -126,7 +131,7 @@
         padding-left: 5%;
         padding-top: 5%;
         margin-top: 80px; 
-        transition: s;
+        transition: 0.5s;
     }
     
     .sideItem {

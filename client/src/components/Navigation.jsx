@@ -1,13 +1,15 @@
 import React, {useState} from "react";
 import styles from "../styles/Navigation.module.css"
 import { FaShoppingCart } from 'react-icons/fa';
-import Logo from "../logo.png";
+import Logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
+import {useSelector} from 'react-redux';
+import {selectCount} from "../redux/reducers/cartSlice";
+
 
 const Navigation = () => {
-
 
     const scrollDown = () => {
         console.log("here")
@@ -18,6 +20,7 @@ const Navigation = () => {
     };
 
     const [openMenu, setOpenMenu] = useState(false);
+    const count = useSelector(selectCount)
 
     const toggleOpenMenu = () => {
         setOpenMenu(!openMenu);
@@ -47,7 +50,7 @@ const Navigation = () => {
             <div className={styles.cart}>
             <Link to="/cart" className={styles.link}>
                 <FaShoppingCart className={styles.cartIcon}/>
-                <div className={styles.counter}>1</div>
+                <div className={count > 0 ? styles.counter: styles.hiddenCounter}>{count}</div>
             </Link>   
         </div>
         </div>
@@ -65,14 +68,12 @@ const Navigation = () => {
             <div className={styles.sideItem}>
                 <Link to="" className={styles.aboutLink} onClick={()=>{scrollDown(); toggleOpenMenu()}}>About</Link>
             </div>
-
-           
             </div>
         </div>
         <div className={styles.cart}>
             <Link to="/cart" className={styles.link}>
                 <FaShoppingCart className={styles.cartIcon}/>
-                <div className={styles.counter}>1</div>
+                <div className={count > 0 ? styles.counter: styles.hiddenCounter}>{count}</div>
             </Link>   
             </div>
         </div>

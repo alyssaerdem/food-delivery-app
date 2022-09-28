@@ -1,16 +1,33 @@
 import React, {useState} from "react";
 import { useLocation } from "react-router-dom";
-import PizzaImage from "../margherita_pizza.png";
 import {GiFullPizza} from 'react-icons/gi';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import styles from '../styles/ProductPage.module.css';
+import { increment, addProduct } from "../redux/reducers/cartSlice";
+import { useDispatch } from "react-redux";
+import image from "../images/margherita_pizza.png";
 
 const ProductPage = () => {
+
+const dispatch = useDispatch();
 const location = useLocation();
 const product = location.state.data.product;
-const [selectedSize, setSelectedSize] = useState("");
+const [selectedSize, setSelectedSize] = useState({});
 
+const addToCart = () => {
+
+    if (selectedSize.value !== undefined && selectedSize.price !== undefined) {
+        const selected = {
+            name: product.name,
+            size: selectedSize.value,
+            price: selectedSize.price
+        };
+        dispatch(addProduct(selected));
+        dispatch(increment());
+    }
+    
+}
 console.log(product)
     return (
         <div>
@@ -19,7 +36,7 @@ console.log(product)
             <div className={styles.item}>
             <h1 className={styles.h1}>{product.name}</h1>
             <div className={styles.imgDiv}>
-                <img src={PizzaImage} alt="margherita pizza" className={styles.image}/>
+                <img src={image} alt="margherita pizza" className={styles.image} />
             </div>
             <div className={styles.description}>
 
@@ -36,9 +53,9 @@ console.log(product)
                         let size = element.size;
                         let price = element.price;
                         switch(size) {
-                            case 'Small':  return <div className={selectedSize === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize(size)}><span className={styles.size}>${price}</span><GiFullPizza className={styles.smallPizza}/><p>{size}</p></div>
-                            case 'Medium': return <div className={selectedSize === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize(size)}><span className={styles.size}>${price}</span><GiFullPizza className={styles.mediumPizza}/><p>{size}</p></div>
-                            case 'Large':  return <div className={selectedSize === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize(size)}><span className={styles.size}>${price}</span><GiFullPizza className={styles.largePizza}/><p>{size}</p></div>
+                            case 'Small':  return <div className={selectedSize.value === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.smallPizza}/><p>{size}</p></div>
+                            case 'Medium': return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.mediumPizza}/><p>{size}</p></div>
+                            case 'Large':  return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.largePizza}/><p>{size}</p></div>
                             default: return <div>Size not available</div>
                         }
             })}
@@ -52,7 +69,7 @@ console.log(product)
                     <button className={styles.inputBtn}>+</button>*/}
         </label>    
             </form>  
-            <button className={styles.button}>
+            <button className={styles.button} onClick={()=> addToCart()}>
                     <p>Add to Cart</p>
             </button> 
       </div>
