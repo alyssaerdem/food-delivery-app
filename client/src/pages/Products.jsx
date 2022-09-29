@@ -5,15 +5,16 @@ import LoadingIcon from '../components/LoadingIcon';
 import {Link} from 'react-router-dom';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import axios from 'axios';
+
 
 
 const Products = () => {
 
     const [products, setProducts] = useState(null);
     useEffect(() => {
-        fetch("/api/products")
-          .then((res) => res.json())
-          .then((data) => {setProducts(data.data)});
+        axios.get("/api/products")
+          .then((response) => setProducts(response.data.data))
       }, []);
 
     return (

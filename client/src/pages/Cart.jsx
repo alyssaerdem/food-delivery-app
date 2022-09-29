@@ -8,7 +8,7 @@ import image from "../images/margherita_pizza.png";
 
 
 
-function Cart() {
+const Cart = () => {
     const products = useSelector(selectProducts);
     console.log(products)
     return (

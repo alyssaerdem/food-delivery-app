@@ -1,7 +1,7 @@
 const productService = require("../services/productService");
 
 const getAllProducts = async (req, res) => {
-    const allProducts = await productService.getAllProducts();        // not waiting for promise to resolve?
+    const allProducts = await productService.getAllProducts();        
     console.log("here")
     console.log(allProducts);
     res.send({ status: "OK", data: allProducts});
