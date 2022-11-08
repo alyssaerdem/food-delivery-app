@@ -23,10 +23,10 @@ const Cart = () => {
                         <div>
                         <img src={image} className={styles.image} alt="margherita pizza"/>
                         </div>
-                        <div>
-                        {element.name}
-                         Size: {element.size}
-                         Price: {element.price}
+                        <div className={styles.productInfo}>
+                        <div><p>Product</p> <div>{element.name}</div></div>
+                         <div><p>Size</p> <div>{element.size}</div></div>
+                         <div><p>Price</p> <div>${element.price}</div></div>
                         </div>
                     </div>
                 ))}

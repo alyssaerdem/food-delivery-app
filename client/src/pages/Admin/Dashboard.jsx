@@ -3,6 +3,7 @@ import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { useState } from "react";
 import styles from "../../styles/Dashboard.module.css";
+import ProductForm from "../../components/ProductForm";
 
 const Dashboard = () => {
   const [authenticated, setauthenticated] = useState(sessionStorage.getItem("authenticated"));
@@ -20,6 +21,7 @@ const Dashboard = () => {
         <Navigation />
             <div className={styles.container}>
                 <p>Welcome to your Dashboard</p>
+                <ProductForm />
                 <div className={styles.wrapper}>
                 <button onClick={() => handleLogout()}>Logout</button>
                 </div>
