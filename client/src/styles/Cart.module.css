@@ -1,3 +1,7 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
 .container {
     height: calc(100vh - 200px);
     width: 100vw;
@@ -11,7 +15,6 @@
 
   .product {
     width: 35vw;
-    /*border: 5px solid violet; */
     color: rgb(58, 58, 58);
     display: flex;
     flex-direction: row;
@@ -20,8 +23,8 @@
 
   .image {
     padding-top: 2vh;
-    width: 20vh;
-    height: 8vw;
+    width: 150px;
+    height: 100px;
   }
 
   .productInfo {
@@ -39,3 +42,64 @@
     font-weight: bold;
   }
  
+  .removeIcon {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    color: rgb(58, 58, 58);
+    margin-top: 1.8vh;
+  }
+
+ @media screen and (max-width: 700px) {
+  .image {
+    padding-top: 2vh;
+    width: 100px;
+    height: 65px;
+  }
+
+  .product {
+    width: fit-content;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+    transition: 0.3s;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+  }
+  .productInfo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .productInfo > div {
+    padding: 1vw;
+    width: 60px
+  }
+
+  .productInfo > div > p {
+    padding-bottom: 1vh;
+    font-weight: bold;
+    font-size: 0.8em;
+  }
+
+  .productInfo > div > span {
+   font-size:  0.8em;
+   padding-left: 5vw;
+   justify-content: center;
+   transition: 0.3s;
+   width: inherit;
+   display: flex; 
+   justify-content: center 
+  }
+  
+ 
+  .removeIcon {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    color: rgb(58, 58, 58);
+    margin-top: 5vh;
+  }
+ }

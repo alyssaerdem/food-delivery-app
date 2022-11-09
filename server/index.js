@@ -12,6 +12,7 @@ app.use("/api/products", productRouter);
 app.use("/api/login", authRouter);
 DB.connectDB();
 
+
 /* app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
   }); */

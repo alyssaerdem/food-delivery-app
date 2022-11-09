@@ -4,7 +4,7 @@ import {GiFullPizza} from 'react-icons/gi';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import styles from '../styles/ProductPage.module.css';
-import { increment, addProduct } from "../redux/reducers/cartSlice";
+import { increment, addToCart } from "../redux/reducers/cartSlice";
 import { useDispatch } from "react-redux";
 import image from "../images/margherita_pizza.png";
 
@@ -15,7 +15,7 @@ const location = useLocation();
 const product = location.state.data.product;
 const [selectedSize, setSelectedSize] = useState({});
 
-const addToCart = () => {
+const addProduct = () => {
 
     if (selectedSize.value !== undefined && selectedSize.price !== undefined) {
         const selected = {
@@ -23,8 +23,12 @@ const addToCart = () => {
             size: selectedSize.value,
             price: selectedSize.price
         };
-        dispatch(addProduct(selected));
+        dispatch(addToCart(selected));
         dispatch(increment());
+    }
+
+    else {
+        alert("Please select a size")
     }
     
 }
@@ -53,9 +57,9 @@ console.log(product)
                         let size = element.size;
                         let price = element.price;
                         switch(size) {
-                            case 'Small':  return <div className={selectedSize.value === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.smallPizza}/><p>{size}</p></div>
-                            case 'Medium': return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.mediumPizza}/><p>{size}</p></div>
-                            case 'Large':  return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.largePizza}/><p>{size}</p></div>
+                            case 'Small' || 'S':  return <div className={selectedSize.value === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.smallPizza}/><p>Small</p></div>
+                            case 'Medium' || 'M': return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.mediumPizza}/><p>Medium</p></div>
+                            case 'Large' || 'L':  return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.largePizza}/><p>Large</p></div>
                             default: return <div>Size not available</div>
                         }
             })}
@@ -69,7 +73,7 @@ console.log(product)
                     <button className={styles.inputBtn}>+</button>*/}
         </label>    
             </form>  
-            <button className={styles.button} onClick={()=> addToCart()}>
+            <button className={styles.button} onClick={()=> addProduct()}>
                     <p>Add to Cart</p>
             </button> 
       </div>

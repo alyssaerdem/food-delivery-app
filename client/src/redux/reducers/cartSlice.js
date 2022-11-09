@@ -4,7 +4,8 @@ export const cartSlice = createSlice({
     name: 'cart',
     initialState: {
     value: 0,
-    selectedProducts: [],
+    selectedProducts: {},
+    productId: 0
     },
 
     reducers: {
@@ -14,13 +15,18 @@ export const cartSlice = createSlice({
           decrement: state => {
             state.value -= 1
           },
-          addProduct: (state, action) => {
+          addToCart: (state, action) => {
             console.log(action.payload)
-            state.selectedProducts.push(action.payload)
+            state.selectedProducts[state.productId]= action.payload
+            state.productId++
+          },
+          removeFromCart: (state, action) => {
+            console.log(action.payload)
+            delete state.selectedProducts[action.payload]
           }
     }
 })
 export const selectCount = state => state.cart.value
 export const selectProducts = state => state.cart.selectedProducts
-export const { increment, decrement, addProduct } = cartSlice.actions
+export const { increment, decrement, addToCart, removeFromCart } = cartSlice.actions
 export default cartSlice.reducer

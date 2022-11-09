@@ -1,22 +1,24 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import ProductCard from '../components/ProductCard';
 import styles from '../styles/Products.module.css';
 import LoadingIcon from '../components/LoadingIcon';
 import {Link} from 'react-router-dom';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import axios from 'axios';
-
+import {fetchProducts } from '../redux/productThunks';
+import { useSelector } from 'react-redux';
+import {selectProducts} from '../redux/reducers/productSlice';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 
 const Products = () => {
 
-    const [products, setProducts] = useState(null);
+    const dispatch = useDispatch();
     useEffect(() => {
-        axios.get("/api/products")
-          .then((response) => setProducts(response.data.data))
-      }, []);
+         dispatch(fetchProducts()) }, [dispatch]); 
 
+    const products = useSelector(selectProducts)
     return (
         <div>
             <Navigation />

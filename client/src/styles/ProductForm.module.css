@@ -1,3 +1,7 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
 .container {
     height: 500px;
     width: 500px;
@@ -9,11 +13,11 @@
 }
 
 .form {
-    padding-top: 2vh;
+    padding-top: 1vh;
 }
 
 .form > div {
-    padding: 2vh;
+    padding: 1vh;
     color: rgb(58, 58, 58);
 }
 
@@ -26,7 +30,21 @@ div > p {
 }
 
 .submit {
-    margin-top: 1vw;
     margin-left: 15vw;
 }
 
+.priceBox {
+    margin-left: 20px;
+    width: 80px;
+    height: 10px;
+}
+
+.descBox {
+    height: min-content;
+    width: min-content;
+}
+
+.checkbox > div > p {
+    width: 20px;
+    display: inline-block;
+}
