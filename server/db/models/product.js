@@ -7,6 +7,7 @@ const ProductSchema = new mongoose.Schema({
     description: {type: String, required : true},
     sizes : {type: [{
       size : String,
+      checked: Boolean,
       price : Number
        }], required : true },
   });

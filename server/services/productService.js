@@ -9,16 +9,26 @@ const getAllProducts = async() => {
 }
 
 const createNewProduct = (newProduct) => {
-    const producToInsert = new Product({
+    const productToInsert = new Product({
       ...newProduct,
       createdAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
       updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
     });
-    producToInsert.save()     
+    productToInsert.save()     
     .then(() => console.log("Product added"), 
         (err) => console.log(err)
     );
-    return producToInsert;
+    return productToInsert;
 }
 
-module.exports = {getAllProducts, createNewProduct};
+const deleteProduct = async (productID) => {
+  console.log(productID)
+  try {
+    await Product.deleteOne({ _id: productID });
+    return "Deleted successfully!";
+  } catch (error) {
+    return "There was a Server Side Error!";
+  }
+}
+
+module.exports = {getAllProducts, createNewProduct, deleteProduct};

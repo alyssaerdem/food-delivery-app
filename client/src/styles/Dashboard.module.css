@@ -12,3 +12,20 @@
     border-radius: 2px;
     padding-bottom: 100px;
 }
+
+.products {
+    width: min-content;
+    height: min-content;
+}
+
+.products > div {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+    transition: 0.3s;
+    text-align: center;
+    color:black
+}

@@ -56,13 +56,14 @@ console.log(product)
                 console.log(element)
                         let size = element.size;
                         let price = element.price;
+                        if (element.checked) {
                         switch(size) {
-                            case 'Small' || 'S':  return <div className={selectedSize.value === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.smallPizza}/><p>Small</p></div>
-                            case 'Medium' || 'M': return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.mediumPizza}/><p>Medium</p></div>
-                            case 'Large' || 'L':  return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.largePizza}/><p>Large</p></div>
+                            case 'Small': return <div className={selectedSize.value === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.smallPizza}/><p>Small</p></div> 
+                            case 'Medium': return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.mediumPizza}/><p>Medium</p></div>
+                            case 'Large':  return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.largePizza}/><p>Large</p></div>
                             default: return <div>Size not available</div>
                         }
-            })}
+            }})}
             </div>
             <div className={styles.quantityContainer}>
                 <form>

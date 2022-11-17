@@ -1,0 +1,46 @@
+.container {
+ height: 80vh;
+ width: 20vw;
+ flex-wrap: wrap;
+ flex-direction: row;
+ align-items: center;
+ overflow: scroll;
+ background-color: rgb(245, 245, 245);
+ border-radius: 10px;
+ position: relative;
+ box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+ transition: 0.3s;
+ text-align: left;
+}
+
+.products {
+    width: inherit;
+    height: min-content;
+    background-color: rgb(245, 245, 245);
+}
+
+.products > div {
+    padding-left: 2vw;
+    width: inherit;
+    height: 50px;
+    color:black
+}
+
+.products > div:nth-child(2n) {
+    break-after: auto; 
+  }
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+.editIcon, .deleteIcon {
+    margin-left: 0.2vw;
+    cursor: pointer;
+}
+
+.deleteIcon:hover {
+    color: rgb(255, 70, 70);
+}
+

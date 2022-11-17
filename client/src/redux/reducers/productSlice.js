@@ -14,5 +14,5 @@ export const productSlice = createSlice({
     }
 })
 export const selectProducts = state => state.product.products
-export const { setProducts, addProduct, removeProduct } = productSlice.actions
+export const { setProducts} = productSlice.actions
 export default productSlice.reducer
