@@ -4,21 +4,24 @@
   padding: 40px;
   border-radius: 2px;
   padding-bottom: 100px;
-  background-color: rgb(132, 132, 132);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
 }
 .welcomeH1 {
-  color: rbg(245, 245, 245);
+  color: var(--secondary-color);
   text-align: center;
 }
 .productContainer {
-  width: 800px;
+  width: min-content;
   height: inherit;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .item {
-  width: 30vw;
+  width: 40vw;
   height: 80vh;
 }
 .products {

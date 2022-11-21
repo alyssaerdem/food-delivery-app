@@ -14,7 +14,6 @@
 }
 
 .products {
-  width: inherit;
   height: min-content;
   background-color: rgb(245, 245, 245);
 }

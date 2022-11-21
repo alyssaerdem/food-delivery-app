@@ -53,6 +53,7 @@ const ProductList = () => {
           ))
         ) : (
           <div>
+            <h2>Editing {editProduct.name}</h2>
             <ProductForm
               photo={editProduct.image}
               title={editProduct.name}

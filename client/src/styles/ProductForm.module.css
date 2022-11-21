@@ -4,21 +4,23 @@ body {
 }
 .container {
   background-color: rgb(245, 245, 245);
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
   box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
   transition: 0.3s;
   height: 70vh;
   width: inherit;
+  overflow: hidden;
 }
 
 .form {
-  padding-top: 1vh;
+  padding-top: 2vh;
 }
 
 .form > div {
   padding: 1vh;
   color: var(--secondary-color);
+  margin-left: 2vw;
 }
 
 div > input {

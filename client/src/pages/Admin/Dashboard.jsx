@@ -35,61 +35,65 @@ const Dashboard = () => {
         <Navigation />
         <div className={styles.container}>
           <h1 className={styles.welcomeH1}>Welcome to your Dashboard</h1>
-          <button
-            className={styles.Btn}
-            onClick={() => {
-              setProductList(!productList);
-              setAddProduct(false);
-              setOrderList(false);
-            }}
-          >
-            View Products
-          </button>
-          <button
-            className={styles.Btn}
-            onClick={() => {
-              setAddProduct(!addProduct);
-              setProductList(false);
-              setOrderList(false);
-            }}
-          >
-            {" "}
-            Add Product
-          </button>
-          <button
-            className={styles.Btn}
-            onClick={() => {
-              setOrderList(!orderList);
-              setAddProduct(false);
-              setProductList(false);
-            }}
-          >
-            {" "}
-            View Orders
-          </button>
-          <button onClick={() => handleLogout()}>Logout</button>
-          <div className={styles.productContainer}>
-            {productList ? (
-              <div className={styles.item}>
-                <ProductList />{" "}
-              </div>
-            ) : (
-              <div />
-            )}
-            {addProduct ? (
-              <div className={styles.item}>
-                <ProductForm />
-              </div>
-            ) : (
-              <div />
-            )}
-            {orderList ? (
-              <div className={styles.item}>
-                <OrdersList />
-              </div>
-            ) : (
-              <div />
-            )}
+          <div>
+            <button
+              className={styles.Btn}
+              onClick={() => {
+                setProductList(!productList);
+                setAddProduct(false);
+                setOrderList(false);
+              }}
+            >
+              View Products
+            </button>
+            <button
+              className={styles.Btn}
+              onClick={() => {
+                setAddProduct(!addProduct);
+                setProductList(false);
+                setOrderList(false);
+              }}
+            >
+              {" "}
+              Add Product
+            </button>
+            <button
+              className={styles.Btn}
+              onClick={() => {
+                setOrderList(!orderList);
+                setAddProduct(false);
+                setProductList(false);
+              }}
+            >
+              {" "}
+              View Orders
+            </button>
+            <button onClick={() => handleLogout()}>Logout</button>
+          </div>
+          <div>
+            <div className={styles.productContainer}>
+              {productList ? (
+                <div className={styles.item}>
+                  <ProductList />{" "}
+                </div>
+              ) : (
+                <div />
+              )}
+              {addProduct ? (
+                <div className={styles.item}>
+                  <ProductForm />
+                </div>
+              ) : (
+                <div />
+              )}
+              {orderList ? (
+                <div className={styles.item}>
+                  <OrdersList />
+                </div>
+              ) : (
+                <div />
+              )}
+            </div>
           </div>
         </div>
         <Footer />
