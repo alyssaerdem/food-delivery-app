@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   overflow: scroll;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background-color);
   border-radius: 10px;
   position: relative;
   box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
@@ -15,7 +15,7 @@
 
 .products {
   height: min-content;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--background-color);
 }
 
 .products > div {
