@@ -1,46 +1,46 @@
 .container {
- height: 70vh;
- width: inherit;
- flex-wrap: wrap;
- flex-direction: row;
- align-items: center;
- overflow: scroll;
- background-color: rgb(245, 245, 245);
- border-radius: 10px;
- position: relative;
- box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
- transition: 0.3s;
- text-align: left;
+  height: 70vh;
+  width: inherit;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  overflow: scroll;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+  transition: 0.3s;
+  text-align: left;
 }
 
 .products {
-    width: inherit;
-    height: min-content;
-    background-color: rgb(245, 245, 245);
+  width: inherit;
+  height: min-content;
+  background-color: rgb(245, 245, 245);
 }
 
 .products > div {
-    padding-left: 2vw;
-    width: inherit;
-    height: 50px;
-    color:black
+  padding-left: 2vw;
+  width: inherit;
+  height: 50px;
+  color: black;
 }
 
 .products > div:nth-child(2n) {
-    break-after: auto; 
-  }
-
-.currentH1 {
-    color: var(--secondary-color); 
-    text-align: center;
+  break-after: auto;
 }
 
-.editIcon, .deleteIcon {
-    margin-left: 0.8vw;
-    cursor: pointer;
+.currentH1 {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.editIcon,
+.deleteIcon {
+  margin-left: 0.8vw;
+  cursor: pointer;
 }
 
 .deleteIcon:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
-

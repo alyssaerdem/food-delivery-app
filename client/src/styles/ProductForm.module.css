@@ -1,50 +1,50 @@
 body {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 .container {
-    background-color: rgb(245, 245, 245);
-    border-radius: 20px;
-    position: relative;
-    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
-    transition: 0.3s;
-    height: 70vh;
-    width: inherit;
+  background-color: rgb(245, 245, 245);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+  transition: 0.3s;
+  height: 70vh;
+  width: inherit;
 }
 
 .form {
-    padding-top: 1vh;
+  padding-top: 1vh;
 }
 
 .form > div {
-    padding: 1vh;
-    color: var(--secondary-color); 
+  padding: 1vh;
+  color: var(--secondary-color);
 }
 
 div > input {
-    padding: 0.5vw;
+  padding: 0.5vw;
 }
 div > p {
-    width: 100px;
-    display: inline-block;
+  width: 100px;
+  display: inline-block;
 }
 
 .submit {
-    margin-left: 15vw;
+  margin-left: 15vw;
 }
 
 .priceBox {
-    margin-left: 20px;
-    width: 80px;
-    height: 10px;
+  margin-left: 20px;
+  width: 80px;
+  height: 10px;
 }
 
 .descBox {
-    height: min-content;
-    width: min-content;
+  height: min-content;
+  width: min-content;
 }
 
 .checkbox > div > p {
-    width: 20px;
-    display: inline-block;
+  width: 20px;
+  display: inline-block;
 }

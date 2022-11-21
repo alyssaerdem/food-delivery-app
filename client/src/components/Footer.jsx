@@ -6,7 +6,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.card}>
-            <img src={Logo} alt="Pizza Bella logo" className={styles.logo}/> 
+          <img src={Logo} alt="Pizza Bella logo" className={styles.logo} />
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>Locations</h1>
@@ -34,18 +34,10 @@ const Footer = () => {
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>About</h1>
-          <p className={styles.text}>
-            Our Story
-          </p>
-          <p className={styles.text}>
-            Careers
-          </p>
-          <p className={styles.text}>
-            Contact
-          </p>
-          <p className={styles.text}>
-            Privacy Policy
-          </p>
+          <p className={styles.text}>Our Story</p>
+          <p className={styles.text}>Careers</p>
+          <p className={styles.text}>Contact</p>
+          <p className={styles.text}>Privacy Policy</p>
         </div>
       </div>
     </div>

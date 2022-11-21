@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import LoadingIcon from "../components/LoadingIcon";
@@ -17,12 +17,12 @@ const Home = () => {
     <div>
       <Navigation />
       <div className={styles.container}>
-      <LoadingIcon />
+        <LoadingIcon />
         {data}
       </div>
       <Footer />
     </div>
   );
-}
+};
 
 export default Home;

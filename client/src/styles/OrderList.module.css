@@ -1,19 +1,19 @@
 .container {
-    height: 70vh;
-    width: inherit;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    overflow: scroll;
-    background-color: rgb(245, 245, 245);
-    border-radius: 10px;
-    position: relative;
-    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
-    transition: 0.3s;
-    text-align: left;
-   }
+  height: 70vh;
+  width: inherit;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  overflow: scroll;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+  transition: 0.3s;
+  text-align: left;
+}
 
-   .currentH1 {
-    color: var(--secondary-color); 
-    text-align: center;
+.currentH1 {
+  color: var(--secondary-color);
+  text-align: center;
 }

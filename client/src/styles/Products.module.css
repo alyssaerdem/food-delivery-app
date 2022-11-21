@@ -1,19 +1,18 @@
 .container {
-    height: 100vh;
-    background-color: rgb(245, 245, 245); 
+  height: 100vh;
+  background-color: rgb(245, 245, 245);
   /*  background-color: rgb(255, 70, 70); */
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    overflow: scroll;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  overflow: scroll;
 }
 
 .LoadingIconDiv {
   margin: auto;
   padding-bottom: 11%;
-
 }
 
 .LoadingIconDiv p {
@@ -25,13 +24,12 @@
 }
 
 .item:nth-child(4n) {
-  break-after: auto; 
+  break-after: auto;
 }
 
 .link {
   text-decoration: none;
 }
-
 
 @media only screen and (max-width: 800px) {
   .container {
@@ -46,4 +44,3 @@
     margin: 1%;
   }
 }
-

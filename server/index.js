@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 //const router = express.Router();
 const PORT = process.env.PORT || 3001;
 const bodyParser = require("body-parser");
@@ -11,7 +11,6 @@ app.use(bodyParser.json());
 app.use("/api/products", productRouter);
 app.use("/api/login", authRouter);
 DB.connectDB();
-
 
 /* app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });

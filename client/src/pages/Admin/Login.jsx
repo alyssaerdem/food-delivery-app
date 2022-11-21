@@ -10,49 +10,57 @@ const Login = () => {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
   const [error, setError] = useState(false);
-  const [authenticated, setauthenticated] = useState(sessionStorage.getItem("authenticated"));
+  const [authenticated, setAuthenticated] = useState(
+    sessionStorage.getItem("authenticated")
+  );
 
   const handleClick = async () => {
     try {
-      await axios.post("http://localhost:3000/api/login", {
-        username,
-        password,
-      }).then(() => {sessionStorage.setItem("authenticated", true)
-                     navigate("/dashboard")});
+      await axios
+        .post("http://localhost:3000/api/login", {
+          username,
+          password,
+        })
+        .then(() => {
+          sessionStorage.setItem("authenticated", true);
+          navigate("/dashboard");
+        });
     } catch (err) {
       setError(true);
     }
   };
 
   if (authenticated) {
-    return <Navigate to="/dashboard"/>;
-    } else {
-      return (
-    <div>
-       <Navigation />
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <h1>Admin Dashboard</h1>
-        <input
-          placeholder="username"
-          className={styles.input}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          placeholder="password"
-          type="password"
-          className={styles.input}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={handleClick} className={styles.button}>
-          Sign In
-        </button>
-        {error && <alert className={styles.error}>Invalid Credentials</alert>}
+    return <Navigate to="/dashboard" />;
+  } else {
+    return (
+      <div>
+        <Navigation />
+        <div className={styles.container}>
+          <div className={styles.wrapper}>
+            <h1>Admin Dashboard</h1>
+            <input
+              placeholder="username"
+              className={styles.input}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              placeholder="password"
+              type="password"
+              className={styles.input}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handleClick} className={styles.button}>
+              Sign In
+            </button>
+            {error && (
+              <alert className={styles.error}>Invalid Credentials</alert>
+            )}
+          </div>
+        </div>
+        <Footer />
       </div>
-    </div>
-    < Footer />
-    </div>
-  );
+    );
   }
 };
 
