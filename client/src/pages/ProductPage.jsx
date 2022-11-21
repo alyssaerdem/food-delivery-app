@@ -38,7 +38,7 @@ console.log(product)
             <Navigation />
         <div className={styles.container}>
             <div className={styles.item}>
-            <h1 className={styles.h1}>{product.name}</h1>
+            <h1 className={styles.nameh1}>{product.name}</h1>
             <div className={styles.imgDiv}>
                 <img src={image} alt="margherita pizza" className={styles.image} />
             </div>
@@ -52,18 +52,22 @@ console.log(product)
             <div className={styles.item}>
                 <h2 className={styles.h2}>Sizes</h2>
             <div className={styles.sizeContainer}>
-            {product.sizes.map(element => {
-                console.log(element)
-                        let size = element.size;
-                        let price = element.price;
-                        if (element.checked) {
+            {Object.entries(product.sizes).map(element => {
+                        let size = element[0];
+                        let price = element[1].price;
+                        let checked = element[1].checked;
+                        if (checked) {
                         switch(size) {
                             case 'Small': return <div className={selectedSize.value === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.smallPizza}/><p>Small</p></div> 
                             case 'Medium': return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.mediumPizza}/><p>Medium</p></div>
                             case 'Large':  return <div className={selectedSize.value  === size ? styles.selectedSize : styles.sizeItem} onClick={() => setSelectedSize({value: size, price: price})}><span className={styles.size}>${price}</span><GiFullPizza className={styles.largePizza}/><p>Large</p></div>
                             default: return <div>Size not available</div>
-                        }
-            }})}
+                        }           
+            }
+            else {
+                return ""
+            }
+            })}
             </div>
             <div className={styles.quantityContainer}>
                 <form>

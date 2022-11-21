@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import ProductPage from "./pages/ProductPage";
 import Login from "./pages/Admin/Login";
 import Dashboard from "./pages/Admin/Dashboard";
+import "./App.css"
 
 function App() {
   return (

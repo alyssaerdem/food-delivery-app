@@ -50,10 +50,8 @@
   
   .text {
     color: lightgray;
+    width: inherit;
+    display: inline-block;
+    padding: 2px;
   }
   
-p {
-  width: inherit;
-  display: inline-block;
-  padding: 2px;
- }

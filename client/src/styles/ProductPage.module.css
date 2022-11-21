@@ -21,14 +21,16 @@
     height: 280px;
 }
 
-.h1, .description {
-    color: rgb(58, 58, 58);
+.nameh1, .description {
+    color: var(--secondary-color); 
 
 }
 
-.h1 {
+.nameh1 {
     margin-top: 20px;
     text-shadow: 0.2px 0.2px #989898;
+    margin-right: 20px;
+    text-align: center;
 }
 
 .description {
@@ -54,13 +56,13 @@
 }
 
 .h2 {
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
     margin-top: 20%;
 }
 
 .smallPizza, .mediumPizza, .largePizza {
     padding: 20%;
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
     margin-bottom: 0;
 }
 .sizeItem, .selectedSize {
@@ -105,7 +107,7 @@
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
 }
 .sizeItem, .selectedSize > p {
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
     font-display: bold;
 }
 
@@ -114,7 +116,7 @@
     border-width: 20px;
     height: 40%;
     width: 415px;
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
   /*  border: 2px solid green; */
     float: right;
     padding-bottom: 5vh;

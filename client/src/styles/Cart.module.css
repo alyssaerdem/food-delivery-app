@@ -3,19 +3,20 @@ body {
   height: 100vh;
 }
 .container {
-    height: calc(100vh - 200px);
+    height: 100vh;
     width: 100vw;
     background-color: rgb(245, 245, 245);
-    color: rgb(58, 58, 58); 
+    color: var(--secondary-color); 
     display: flex;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
    /* border: #989898 solid 5px; */
+    overflow-y: scroll;
   }
 
   .product {
-    width: 35vw;
-    color: rgb(58, 58, 58);
+    width: 60vw;
+    color: var(--secondary-color); 
     display: flex;
     flex-direction: row;
     padding: 1vh;
@@ -46,11 +47,62 @@ body {
     height: 25px;
     width: 25px;
     cursor: pointer;
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
     margin-top: 1.8vh;
   }
 
+  .inputP, .paymentP {
+    text-align: left;
+  }
+  
+  .paymentP {
+    display: inline;
+    padding-right: 12px;
+  }
+
+  .paymentP > h4 {
+    display: inline;
+  }
+
+  .paymentDiv {
+    padding-top: 8px;
+  }
+
+  .checkoutDiv {
+    margin-top: 2vh;
+    border: 2px solid;
+    border-radius: 10px;
+    height: min-content;
+    width: 400px;
+    padding: 2%;
+  }
+
+  .button {
+  margin-top: 2vh;
+  height: 50px;
+  border-radius: 16px;
+  color: rgb(245, 245, 245);
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 0px var(--primary-color);
+  background: linear-gradient(170deg, #f49a9a 5%, var(--primary-color));
+    
+}
+
+.button:hover {
+    box-shadow: 0 8px 16px 0 rgba(234, 234, 234, 0.2); 
+    cursor: pointer;
+    background-color: rgb(245, 208, 208);
+    box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 20px -4px;
+    transition: 0.4s;
+}
+
  @media screen and (max-width: 700px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
   .image {
     padding-top: 2vh;
     width: 100px;
@@ -65,7 +117,6 @@ body {
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
     transition: 0.3s;
     margin-bottom: 2vh;
-    display: flex;
     justify-content: center;
   }
   .productInfo {
@@ -94,12 +145,17 @@ body {
    justify-content: center 
   }
   
- 
+  .checkoutDiv {
+    border: none;
+    width: 300px;
+  }
+
   .removeIcon {
     height: 25px;
     width: 25px;
     cursor: pointer;
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
     margin-top: 5vh;
   }
  }
+

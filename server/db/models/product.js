@@ -5,11 +5,12 @@ const ProductSchema = new mongoose.Schema({
     name: {type: String, required: true},
     image: {type: String, required: true},
     description: {type: String, required : true},
-    sizes : {type: [{
-      size : String,
+    sizes : {
+      type: Object,
+      String: {
       checked: Boolean,
       price : Number
-       }], required : true },
+       }, required: true}, 
   });
   
 // create a model with productSchema

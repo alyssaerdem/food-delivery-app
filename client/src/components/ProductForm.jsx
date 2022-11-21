@@ -3,27 +3,16 @@ import styles from "../styles/ProductForm.module.css"
 import { useDispatch } from "react-redux";
 import { fetchProducts, addProduct } from "../redux/productThunks";
 
-const ProductForm  = () => {
+const ProductForm  = ({photo = '', title ='', description='', sizeInfo= {
+    "Small": {checked: false, price: 0},
+    "Medium": {checked: false, price: 0},
+    "Large": {checked: false, price: 0},}}) => {
     const dispatch = useDispatch();
-    const [image, setImage] = useState('');
-    const [name, setName] = useState('');
-    const [desc, setDesc] = useState('');
-    const [sizes, setSizes] = useState({
-        "Small": {
-            checked: false,
-            price: 0
-        },
-        "Medium": {
-            checked: false,
-            price: 0
-        },
-        "Large": {
-            checked: false,
-            price: 0
-        },
-    });
-    
-
+    const [image, setImage] = useState(photo);
+    const [name, setName] = useState(title)
+    const [desc, setDesc] = useState(description)
+    const [sizes, setSizes] = useState(JSON.parse(JSON.stringify(sizeInfo)))
+   
     const handleName = (e) => {
         setName(e.target.value)
         console.log(name)
@@ -59,13 +48,16 @@ const ProductForm  = () => {
             name: name,
             image: image === "" ? "../images/margherita_pizza.png": image,           // if no image uploaded, set default
             description: desc,
-            sizes: []
+            sizes: {}
         }
         Object.keys(sizes).forEach( key => {
             console.log(key)
             if (key !== "update") { 
-                data.sizes.push({size: key, checked: sizes[key].checked, price: sizes[key].price}) 
+                console.log(key)
+                console.log(sizes[key].checked, sizes[key].price)
+                data.sizes[key] = {checked: sizes[key].checked, price: parseInt(sizes[key].price)}
             }})
+        console.log(data.sizes)
         dispatch(addProduct(data))
         dispatch(fetchProducts())
     }
@@ -90,31 +82,31 @@ const ProductForm  = () => {
             <div className={styles.checkbox}>
                 <p>Sizes</p>
                 <div>
-                    <input type="checkbox" value="S" name="Small" onClick={()=> handleCheck("Small")}/> <p>S</p> 
+                    <input type="checkbox" value="S" name="Small" defaultChecked={sizes["Small"].checked} onClick={()=> handleCheck("Small")}/> <p>S</p> 
                     {
                     sizes["Small"].checked ? (
-                        <input type="number" className={styles.priceBox} required placeholder="$ Price" onChange={(e) => handlePrice(e, "Small")}/>
+                        <input type="number" className={styles.priceBox} required placeholder="$ Price" value={sizes["Small"].price} onChange={(e) => handlePrice(e, "Small")}/>
                      ) : ""
                     }
                 </div>
                 <div>
-                    <input type="checkbox" value="M" name="Medium" onClick={()=> handleCheck("Medium")}/> <p>M</p> 
+                    <input type="checkbox" value="M" name="Medium" defaultChecked={sizes["Medium"].checked}  onClick={()=> handleCheck("Medium")}/> <p>M</p> 
                     {
                     sizes["Medium"].checked ? (
-                        <input type="number" className={styles.priceBox} required placeholder="$ Price" onChange={(e) => handlePrice(e, "Medium")}/>
+                        <input type="number" className={styles.priceBox} required placeholder="$ Price" value={sizes["Medium"].price} onChange={(e) => handlePrice(e, "Medium")}/>
                      ) : ""
                     }
                 </div>
                 <div>
-                <input type="checkbox" value="L" name="Large" onClick={()=> handleCheck("Large")}/> <p>L</p> 
+                <input type="checkbox" value="L" name="Large" defaultChecked={sizes["Large"].checked}  onClick={()=> handleCheck("Large")}/> <p>L</p> 
                     {
                     sizes["Large"].checked ? (
-                        <input type="number" className={styles.priceBox} required placeholder="$ Price" onChange={(e) => handlePrice(e, "Large")}/>
+                        <input type="number" className={styles.priceBox} required placeholder="$ Price" value={sizes["Large"].price} onChange={(e) => handlePrice(e, "Large")}/>
                      ) : ""
                     }
                 </div>
             </div>
-            <input type="submit" value="Add Product" onClick={handleSubmit} className={styles.submit} />
+            <input type="submit" value="Submit" onClick={handleSubmit} className={styles.submit} />
         </div>
         </div>
      

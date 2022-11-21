@@ -1,6 +1,6 @@
 .container {
- height: 80vh;
- width: 20vw;
+ height: 70vh;
+ width: inherit;
  flex-wrap: wrap;
  flex-direction: row;
  align-items: center;
@@ -30,17 +30,17 @@
     break-after: auto; 
   }
 
-h1 {
-    color: black;
+.currentH1 {
+    color: var(--secondary-color); 
     text-align: center;
 }
 
 .editIcon, .deleteIcon {
-    margin-left: 0.2vw;
+    margin-left: 0.8vw;
     cursor: pointer;
 }
 
 .deleteIcon:hover {
-    color: rgb(255, 70, 70);
+    color: var(--primary-color);
 }
 

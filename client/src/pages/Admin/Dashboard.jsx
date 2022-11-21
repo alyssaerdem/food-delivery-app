@@ -4,17 +4,17 @@ import Footer from "../../components/Footer";
 import { useState, useEffect } from "react";
 import styles from "../../styles/Dashboard.module.css";
 import ProductForm from "../../components/ProductForm";
-import { useSelector } from 'react-redux';
-import {selectProducts} from '../../redux/reducers/productSlice';
 import { fetchProducts } from "../../redux/productThunks";
 import { useDispatch } from "react-redux";
 import ProductList from "../../components/ProductList";
+import OrdersList from "../../components/OrderList";
 
 
 const Dashboard = () => {
   const [authenticated, setauthenticated] = useState(sessionStorage.getItem("authenticated"));
   const [addProduct, setAddProduct] = useState(false)
-  const [productList, setProductList] = useState(false)
+  const [productList, setProductList] = useState(true)
+  const [orderList, setOrderList] = useState(false)
 
   const dispatch = useDispatch();
     useEffect(() => {
@@ -32,14 +32,16 @@ const Dashboard = () => {
       <div>
         <Navigation />
             <div className={styles.container}>
-            <h1>Welcome to your Dashboard</h1>
-        <button onClick={() => setAddProduct(!addProduct)}> Add Product</button>
-        <button onClick={() => setProductList(!productList)}> View Products</button>
-        {addProduct ? <ProductForm /> : <div />}
-        {productList ? <ProductList /> : <div />}
-               
-            
-                <button onClick={() => handleLogout()}>Logout</button>
+            <h1 className={styles.welcomeH1}>Welcome to your Dashboard</h1>
+            <button className={styles.Btn} onClick={() => {setProductList(!productList); setAddProduct(false); setOrderList(false)}}>View Products</button>
+            <button className={styles.Btn} onClick={() => {setAddProduct(!addProduct); setProductList(false); setOrderList(false)}}> Add Product</button>
+            <button className={styles.Btn} onClick={() => {setOrderList(!orderList); setAddProduct(false); setProductList(false)}}> View Orders</button>
+            <button onClick={() => handleLogout()}>Logout</button>
+            <div className={styles.productContainer}>
+                {productList ? <div className={styles.item}><ProductList /> </div>: <div />}  
+                {addProduct ? <div className={styles.item}><ProductForm /></div>: <div />}
+                {orderList ? <div className={styles.item}><OrdersList /></div>: <div />}
+            </div>
           </div>
         <Footer />
       </div>

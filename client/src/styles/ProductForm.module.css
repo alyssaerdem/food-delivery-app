@@ -3,13 +3,13 @@ body {
     height: 100vh;
 }
 .container {
-    height: 500px;
-    width: 500px;
     background-color: rgb(245, 245, 245);
     border-radius: 20px;
     position: relative;
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
     transition: 0.3s;
+    height: 70vh;
+    width: inherit;
 }
 
 .form {
@@ -18,7 +18,7 @@ body {
 
 .form > div {
     padding: 1vh;
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
 }
 
 div > input {

@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(132, 132, 132);;
 }
   
 .wrapper {
@@ -24,22 +25,22 @@
     height: 40px;
     margin-bottom: 20px;
     border: none;
-    background-color: rgb(255, 70, 70);
+    background-color: var(--primary-color);
     color: white;
     font-weight: 600;
     border-radius: 10px;
   }
 
   .button:hover {
-        cursor: pointer;
-        border-radius: 25px;
-        box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
-        transition: 0.4s;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+      transition: 0.4s;
   }
   
   .error {
     font-size: 1em;
     text-decoration: solid;
-    color:  rgb(255, 70, 70);
+    color: var(--primary-color);
     text-align: center;
   }

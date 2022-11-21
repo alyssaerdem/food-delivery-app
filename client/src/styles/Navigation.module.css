@@ -6,7 +6,7 @@
     justify-content: space-between;
     overflow: hidden;
     background-color: rgb(245, 245, 245);
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
     transition: 3s;
     box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
     font-size: 1.2em;
@@ -53,7 +53,7 @@
     height: 25px;
     width: 25px;
     cursor: pointer;
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
 }
 
 .hamburgerIcon {
@@ -64,7 +64,7 @@
     height: 30px;
     width: 30px;
     cursor: pointer;
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
 }
 
 
@@ -72,13 +72,6 @@
     color: inherit;
     text-decoration: none;
 }
- /*.userIcon {
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-    color: rgb(58, 58, 58);
-    padding-left: 15px;
-} */
 
 .cart {
     position: relative;
@@ -90,7 +83,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgb(255, 70, 70);
+    background-color: var(--primary-color);
     padding: 5px;
     display: flex;
     align-items: center;

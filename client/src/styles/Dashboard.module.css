@@ -1,18 +1,27 @@
 .container {
-    height: calc(100vh - 100px);
-    display: flex;
+    height: 100vh;
     align-items: center;
-    justify-content: center;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
     padding: 40px;
     border-radius: 2px;
     padding-bottom: 100px;
+    background-color: rgb(132, 132, 132);
+    
+}
+.welcomeH1 {
+    color: rbg(245, 245, 245);
+    text-align: center;
+}
+.productContainer {
+    width: 800px;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
 }
 
+.item {
+    width: 30vw;
+    height: 80vh;
+}
 .products {
     width: min-content;
     height: min-content;
@@ -28,4 +37,9 @@
     transition: 0.3s;
     text-align: center;
     color:black
+}
+
+.Btn {
+    position: relative;
+    margin-right: 10px;
 }

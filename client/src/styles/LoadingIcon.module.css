@@ -3,7 +3,7 @@
     pointer-events: none;
     width: 200px;
     height: 200px;
-    color: rgb(255, 70, 70);
+    color: var(--primary-color)
   }
   
   @media (prefers-reduced-motion: no-preference) {
@@ -16,7 +16,7 @@
     padding-top: 15%;
     min-height: 20vh;
     font-size: calc(10px + 2vmin);
-    color: rgb(58, 58, 58);
+    color: var(--secondary-color); 
     justify-content: center;
   }
   
