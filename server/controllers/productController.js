@@ -8,16 +8,19 @@ const getAllProducts = async (req, res) => {
 };
 
 const createNewProduct = (req, res) => {
-  const { body } = req;
-  if (!body.name || !body.description || !body.sizes || !body.image) {
+  console.log(req.file);
+  console.log(req.body);
+
+  const body = req.body;
+  if (!body.name || !body.description || !body.sizes || !req.file) {
     return;
   }
 
   const newProduct = {
     name: body.name,
-    image: body.image,
+    image: req.file.path,
     description: body.description,
-    sizes: body.sizes,
+    sizes: JSON.parse(req.body.sizes),
   };
 
   console.log(newProduct);

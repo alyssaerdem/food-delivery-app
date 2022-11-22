@@ -3,11 +3,14 @@ import styles from "../styles/ProductCard.module.css";
 import image from "../images/margherita_pizza.png";
 
 const ProductCard = ({ product }) => {
-  console.log(`${product.image}`);
   return (
     <div className={styles.container}>
       <div className={styles.productDiv}>
-        <img src={image} alt="margherita pizza" className={styles.productImg} />
+        <img
+          src={`http://localhost:3001/${product.image.replace("public/", "")}`}
+          alt={product.name}
+          className={styles.productImg}
+        />
       </div>
       <div className={styles.nameDiv}>
         <h2>{product.name}</h2>

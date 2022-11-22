@@ -11,15 +11,20 @@ export function fetchProducts() {
 
 export function addProduct(data) {
   console.log(data);
-  let axiosConfig = {
+  const formData = new FormData();
+  formData.append("name", data.name);
+  formData.append("image", data.image);
+  formData.append("description", data.description);
+  formData.append("sizes", JSON.stringify(data.sizes));
+  const config = {
     headers: {
-      "Content-Type": "application/json; charset=UTF-8",
+      "content-type": "multipart/form-data",
     },
   };
-  data = JSON.stringify(data);
-  console.log(data);
+  // data = JSON.stringify(data);
+  console.log(formData);
   return async function addProductThunk(dispatch, getState) {
-    const response = await axios.post("/api/products", data, axiosConfig);
+    const response = await axios.post("/api/products", formData, config);
     console.log(response);
   };
 }

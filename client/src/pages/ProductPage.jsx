@@ -18,6 +18,7 @@ const ProductPage = () => {
     if (selectedSize.value !== undefined && selectedSize.price !== undefined) {
       const selected = {
         name: product.name,
+        image: product.image,
         size: selectedSize.value,
         price: selectedSize.price,
       };
@@ -35,7 +36,14 @@ const ProductPage = () => {
         <div className={styles.item}>
           <h1 className={styles.nameh1}>{product.name}</h1>
           <div className={styles.imgDiv}>
-            <img src={image} alt="margherita pizza" className={styles.image} />
+            <img
+              src={`http://localhost:3001/${product.image.replace(
+                "public/",
+                ""
+              )}`}
+              alt={product.name}
+              className={styles.image}
+            />
           </div>
           <div className={styles.description}>
             <p>{product.description}</p>

@@ -58,9 +58,12 @@ const Cart = () => {
               <div className={styles.product}>
                 <div>
                   <img
-                    src={image}
+                    src={`http://localhost:3001/${val.image.replace(
+                      "public/",
+                      ""
+                    )}`}
                     className={styles.image}
-                    alt="margherita pizza"
+                    alt={val.name}
                   />
                 </div>
                 <div className={styles.productInfo}>

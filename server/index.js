@@ -7,6 +7,8 @@ const authRouter = require("./routes/authRoutes");
 const app = express();
 const DB = require("./db/index");
 
+const path = require("path");
+app.use(express.static(path.resolve("./public")));
 app.use(bodyParser.json());
 app.use("/api/products", productRouter);
 app.use("/api/login", authRouter);
