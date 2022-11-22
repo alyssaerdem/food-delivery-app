@@ -87,6 +87,7 @@ body {
   font-weight: 600;
   text-shadow: 1px 1px 0px var(--primary-color);
   background: linear-gradient(170deg, #f49a9a 5%, var(--primary-color));
+  width: 320px;
 }
 
 .button:hover {
@@ -106,6 +107,8 @@ body {
     padding-top: 2vh;
     width: 100px;
     height: 65px;
+    border-radius: 220%;
+    object-fit: cover;
   }
 
   .product {

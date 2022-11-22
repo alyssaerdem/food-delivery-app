@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import styles from "../styles/ProductPage.module.css";
 import { increment, addToCart } from "../redux/reducers/cartSlice";
 import { useDispatch } from "react-redux";
-import image from "../images/margherita_pizza.png";
 
 const ProductPage = () => {
   const dispatch = useDispatch();

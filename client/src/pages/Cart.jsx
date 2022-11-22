@@ -8,7 +8,6 @@ import {
   removeFromCart,
 } from "../redux/reducers/cartSlice";
 import { useSelector } from "react-redux";
-import image from "../images/margherita_pizza.png";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useDispatch } from "react-redux";
 

@@ -25,6 +25,8 @@
 .productImg {
   padding-top: 15px;
   height: 100%;
+  border-radius: 220%;
+  object-fit: cover;
 }
 
 .nameDiv {

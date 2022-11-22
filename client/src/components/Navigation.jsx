@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Navigation.module.css";
 import { FaShoppingCart } from "react-icons/fa";
-import Logo from "../images/logo.png";
+import Logo from "../logos/logo.png";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";

@@ -139,7 +139,8 @@
   margin-top: 40px;
   height: 60px;
   border-radius: 20px;
-  background-color: #52af55;
+  background: linear-gradient(170deg, #46b524 5%, #52af55 95%);
+  color: rgb(245, 245, 245);
   width: 40%;
 }
 

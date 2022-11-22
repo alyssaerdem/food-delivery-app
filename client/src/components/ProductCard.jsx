@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/ProductCard.module.css";
-import image from "../images/margherita_pizza.png";
 
 const ProductCard = ({ product }) => {
   return (
