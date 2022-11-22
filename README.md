@@ -1,3 +1,10 @@
-# food-delivery-app
+# General Info
+Responsive delivery web app for a fictional pizza restaurant  
 
-Responsive MERN stack web app for a fictional pizza restaurant  *(in-progress)*
+## Technologies
+#### Frontend
+* React
+#### Backend
+* Node.js
+* Express
+* MongoDB
